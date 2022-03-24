@@ -29,20 +29,20 @@ export default function ExtraBagComponentExampleApp() {
   }
 
   return (
-    <Container style={{ paddingTop: "3rem" }}>
-      <Row>
-        <OfferSummary offer={offer} />
-      </Row>
-      <Row>
-        <PassengerInput passengers={passengers} />
-      </Row>
-      <Row>
-        <Button variant="dark" className="m-auto" onClick={toggleShowBags}>
-          Add Extra Bags
-        </Button>
-      </Row>
+    <>
+      <Container style={{ paddingTop: "3rem", maxWidth: "640px" }} fluid="sm">
+        <Row>
+          <OfferSummary offer={offer} />
+        </Row>
+        <Row>
+          <PassengerInput passengers={passengers} />
+        </Row>
+        <Row>
+          <Button onClick={toggleShowBags}>Add Extra Bags</Button>
+        </Row>
+      </Container>
 
-      <Modal show={showBags} onHide={handleClose} size="lg">
+      <Modal show={showBags} onHide={handleClose} size="xl">
         <Modal.Header closeButton>
           <Modal.Title>Extra Bags</Modal.Title>
         </Modal.Header>
@@ -56,6 +56,6 @@ export default function ExtraBagComponentExampleApp() {
           </Container>
         </Modal.Body>
       </Modal>
-    </Container>
+    </>
   );
 }

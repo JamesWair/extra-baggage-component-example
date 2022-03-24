@@ -16,7 +16,7 @@ export default function PassengerInput(props) {
               value={props.passengers[0].name}
             />
           </Form.Group>
-          <Form.Group>
+          <Form.Group style={{ paddingTop: "0.5rem" }}>
             <Form.Label>Passenger 2</Form.Label>
             <Form.Control
               type="text"
